@@ -33,3 +33,7 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, messages))
 
 print("Bot is running...")
 app.run_polling()
+if text == "المحاضرة الأولى":
+    await update.message.reply_document(
+        document="lectures/lecture1.pdf"
+    )
